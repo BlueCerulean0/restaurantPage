@@ -1,0 +1,542 @@
+body {
+    background-image: url("/images/pexels-chanwalrus-958545.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    backface-visibility: visible;
+    color: white;
+    font-family: sans-serif;
+    margin: 0;
+    overflow: auto;
+    overflow-x: hidden;
+    min-height: 150vh;
+}
+
+
+@media (max-width: 700px) {
+    .image {
+        margin-right: 10px !important;
+        margin-left: 10px !important;
+    }
+    header nav {
+        width: 70% !important;
+        justify-content: space-around !important;
+        gap: 8px !important;
+
+    }
+
+    #content {
+        flex-direction: column-reverse;
+        justify-content: center !important;
+        align-items: center !important;
+
+    }
+
+    .info {
+        margin-top: 1rem !important;
+        margin-left: 1rem !important;
+        margin-right: 0 !important;
+    }
+
+    .image {
+        margin-top: 1rem !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    .menuCards {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 1rem !important;
+
+    }
+
+    .card {
+        width: 80% !important;
+        height: 300px !important;
+    }
+
+}
+
+
+
+header {
+    position: sticky !important;
+    z-index: 2 !important;
+    width: 100%;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.37);
+    backdrop-filter: blur(5px);
+    margin: 0;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+}
+
+.logo {
+    color: #EF6F4F;
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-family: 'Josefin Sans', sans-serif;
+    text-decoration: orangered;
+    outline: orangered;
+}
+
+header nav {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    margin-right: 20px;
+}
+
+nav button {
+    display: flex;
+    border: none;
+    background: none;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: 0.2s;
+    text-align: center;
+    justify-content: center;
+    cursor: pointer;
+    outline: 2px white solid;
+    border-radius: 0.8rem;
+    padding: 0.5rem 0.5rem;
+}
+
+nav button:hover {
+    transform: scale(1.08);
+    color: orangered;
+    outline: 2px orangered solid;
+}
+
+nav button:active {
+    transform: scale(0.95);
+}
+
+.info {
+    display: grid;
+    margin-top: 5rem;
+    margin-left: 5rem;
+    width: 400px;
+    height: 100%;
+    border: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 20px;
+    font-size: 1.2rem;
+    border-radius: 15px;
+    background-color: rgba(19, 19, 19, 0.56);
+    backdrop-filter: blur(3px);
+}
+
+#content {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.image {
+    background-image: url("/images/ok-ent.gif");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 300px;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    margin-top: 80px;
+    margin-right: 50px;
+    margin-left: 20px;
+
+}
+
+.orderBtn {
+    display: flex;
+    gap: 1rem;
+}
+
+.orderBtn button{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    font-size: 0.8rem;
+    font-weight: 600;
+    outline: none;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 0.6rem;
+    font-family: 'Josefin Sans', sans-serif;
+    box-shadow: 4px 4px 4px rgba(64, 69, 64, 0.35);
+    transition: transform 0.3s ease;
+}
+
+.orderBtn button:hover {
+    transform: scale(1.03);
+}
+.orderBtn button:active {
+    transform: scale(0.99);
+}
+
+.orderBtn > :first-child {
+    background: #3EA66B;
+    color: white;
+}
+
+.orderBtn > :last-child {
+    background: #FFFFFF;
+    color: black;
+}
+
+
+.orderBtn > :first-child:hover {
+    transition: transform 0.1s ease;
+    background: #45BF78;
+}
+
+.orderBtn > :last-child:hover {
+    transition: transform 0.1s ease;
+    background: #F2F2F2;
+}
+
+.orderBtn > :first-child:active {
+    transition: transform 0.1s ease-in;
+    background: #34975F;
+}
+
+.orderBtn > :last-child:active {
+    transition: transform 0.1s ease-in;
+    background: #E0E0E0;
+}
+
+h1 > span {
+    color: #EF6F4F;
+    font-family: sans-serif;
+}
+
+h1 {
+    white-space: pre-wrap;
+    line-height: 1.5;
+}
+
+
+/*the styles bellow are for the menu*/
+
+.bigContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+}
+
+.menuCards {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    margin: 2rem auto;
+    position: relative;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+    justify-items: center;
+    max-height: 80vh;
+    max-width: 100%;
+
+
+}
+
+.card {
+    width: 200px;
+    height: 200px;
+    perspective: 1000px;
+}
+
+
+.card-inner {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s cubic-bezier(0.4, 0.2, 0.3, 1);
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+/* Flip effect on hover */
+.card:hover .card-inner {
+    transform: rotateY(180deg) rotateX(10deg);
+}
+
+/* Front and back sides of the card */
+.card-front,
+.card-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Front side */
+.card-front {
+    background-image: url("../images/nutral/rem-transparent.gif");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.44);
+    backdrop-filter: blur(3px);
+
+}
+
+/* Back side */
+.card-back {
+    transform: rotateY(180deg);
+    background-color: rgba(0, 0, 0, 0.44);
+    backdrop-filter: blur(8px);
+
+}
+
+.card-back p {
+    margin: 10px;
+
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.card-inner > div > h2 {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.55);
+    width: 100%;
+    text-align: center;
+    margin-top: 90%;
+}
+
+
+/*anything after this is for shop*/
+
+
+@media (max-width: 700px) {
+    .container {
+        max-width: 90%;
+        padding: 8px;
+
+    }
+    #signWith,
+    #nameContainer {
+        flex-wrap: wrap;
+    }
+}
+
+#sign {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.container {
+    display: flex;
+    justify-self: center;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.42);
+    backdrop-filter: blur(5px);
+    box-shadow: -4px 4px rgba(71, 70, 70, 0.144);
+    border-radius: 8px;
+    text-align: center;
+    color: white;
+    width: 300px;
+    height: 100%;
+    margin-top: 100px;
+    overflow: hidden;
+    padding-bottom: 20px;
+}
+
+
+input, select {
+    outline: 0;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    margin: 5px;
+    background-color: #3b364c;
+    border-radius: 4px;
+    padding: 10px;
+    color: white;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+::placeholder {
+    color: rgba(255, 255, 255, 0.6);;
+}
+
+#form {
+    display: flex;
+    flex-direction: column;
+    border: 10px;
+    margin: 10px;
+    gap: 10px;
+}
+
+#signUp {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#info {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-self: center;
+    width: 250px;
+}
+
+#nameContainer {
+    display: flex;
+    width: 100%;
+}
+
+#nameContainer input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    color: white;
+    background-color: #3b364c;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+#map {
+    display: flex;
+    flex-direction: column;
+}
+
+fieldset {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+#create {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    width: 240px;
+    padding: 8px;
+    background-color: #0954e0;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    overflow: hidden;
+    margin-top: 8px;
+    font-weight: bold;
+}
+
+#create:hover {
+    background-color: #23549c;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+#create:active {
+    background-color: #2331ad;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.dateAndTime {
+    display: flex;
+}
+
+
+/*anything after this is for the about tab*/
+
+@media (max-width: 700px) {
+    .aboutContainer {
+        width: 80% !important;
+        margin-left: 0 !important;
+        font-size: .8rem;
+    }
+}
+
+.aboutContainer {
+    display: flex;
+    width: 60%;
+    height: 100%;
+    align-self: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.62);
+    backdrop-filter: blur(5px);
+    overflow: auto;
+    color: white;
+    outline: 4px solid orangered;
+    border-radius: 8px;
+    padding: 16px;
+    margin-top: 40px;
+    margin-left: 50px;
+}
+
+.bruh {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.aboutContainer > a > svg {
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.aboutContainer > a > svg:hover {
+    fill: #4178c3;
+    transform: scale(1.1) rotate(360deg);
+}
+
+.aboutContainer > a {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.aboutContainer > a > p {
+    color: #2bd1c3;
+    font-size: medium;
+    font-weight: bold;
+    background: linear-gradient(90deg, #6433ae, orangered, cyan, mediumseagreen, deepskyblue, #a5d31b);
+    background-size: 400% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: rainbow 5s linear infinite;
+
+}
+
+@keyframes rainbow {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
